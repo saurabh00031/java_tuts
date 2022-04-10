@@ -13,11 +13,14 @@ interface A{
     void abc(int a);
     void def(int b);
     
-    
+    default void privfunction()
+    {
+        System.out.println("hii i m private");
+    }
     
     default void greet(String sp)   
     {
-       // privfunction();
+        privfunction();
         System.out.println(sp+" hii");
         
     }
